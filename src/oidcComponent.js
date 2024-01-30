@@ -99,10 +99,10 @@ const OidcComponent = function OidcComponent(oidc) {
       const menuButtonCls = isExpanded ? ' faded' : '';
       userAvatarButton = Origo.ui.Button({
         icon: menuIcon,
-        cls: `control icon-smaller medium round absolute light top-right${menuButtonCls}`,
-        style: 'top: 4rem',
+        cls: `control icon-smaller medium round absolute light top-left${menuButtonCls}`,
+        style: 'top: 12rem',
         tooltipText: 'Användarmeny',
-        tooltipPlacement: 'west',
+        tooltipPlacement: 'east',
         click() {
           toggleUserMenu();
         }
@@ -138,7 +138,7 @@ const OidcComponent = function OidcComponent(oidc) {
 
       contentComponent = Origo.ui.Component({
         render() {
-          return `<div class="relative width-12"><ul class="padding-y-small" id="${this.getId()}""></ul></div>`;
+          return `<div class="relative width-auto"><ul class="padding-y-small" id="${this.getId()}""></ul></div>`;
         },
         components: [userNameItem],
         onAdd() {
@@ -147,9 +147,9 @@ const OidcComponent = function OidcComponent(oidc) {
       });
 
       oidcMenu = Origo.ui.Element({
-        cls: 'absolute flex column top-right control box bg-white overflow-hidden z-index-top faded',
+        cls: 'absolute flex column top-left control box bg-white overflow-hidden z-index-top faded',
         collapseX: true,
-        style: 'top: 4rem',
+        style: 'top: 12rem',
         components: [headerComponent, contentComponent]
       });
     },
