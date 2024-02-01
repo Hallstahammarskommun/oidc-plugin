@@ -100,7 +100,7 @@ const OidcComponent = function OidcComponent(oidc) {
       userAvatarButton = Origo.ui.Button({
         icon: menuIcon,
         cls: `control icon-smaller medium round absolute light top-right${menuButtonCls}`,
-        style: 'top: 4rem',
+        style: 'top: 1rem',
         tooltipText: 'Användarmeny',
         tooltipPlacement: 'west',
         click() {
@@ -149,7 +149,7 @@ const OidcComponent = function OidcComponent(oidc) {
       oidcMenu = Origo.ui.Element({
         cls: 'absolute flex column top-right control box bg-white overflow-hidden z-index-top faded',
         collapseX: true,
-        style: 'top: 4rem',
+        style: 'top: 1rem',
         components: [headerComponent, contentComponent]
       });
     },
