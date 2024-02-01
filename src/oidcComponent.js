@@ -138,7 +138,7 @@ const OidcComponent = function OidcComponent(oidc) {
 
       contentComponent = Origo.ui.Component({
         render() {
-          return `<div class="relative width-12"><ul class="padding-y-small" id="${this.getId()}""></ul></div>`;
+          return `<div class="relative width-auto"><ul class="padding-y-small" id="${this.getId()}""></ul></div>`;
         },
         components: [userNameItem],
         onAdd() {
